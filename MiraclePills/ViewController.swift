@@ -13,6 +13,11 @@ class ViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
     @IBOutlet weak var chooseBtn: UIButton!
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var okBtn: UIButton!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var countryTextField: UITextField!
+    @IBOutlet weak var zipCodeLabel: UILabel!
+    @IBOutlet weak var zipCodeTextField: UITextField!
+    @IBOutlet weak var buyNowBtn: UIButton!
     
     @IBOutlet weak var statePicker: UIPickerView!
     let states = ["Ankara","İstanbul","Adana","İzmir","Antalya","Manisa","Van","Şanlıurfa"]
@@ -34,6 +39,12 @@ class ViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
         statePicker.isHidden = false
         cancelBtn.isHidden = false
         okBtn.isHidden = false
+        countryLabel.isHidden = true
+        countryTextField.isHidden = true
+        zipCodeLabel.isHidden = true
+        zipCodeTextField.isHidden = true
+        buyNowBtn.isHidden = true
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -52,6 +63,11 @@ class ViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
         okBtn.isHidden = true
         cancelBtn.isHidden = true
         statePicker.isHidden = true
+        countryLabel.isHidden = false
+        countryTextField.isHidden = false
+        zipCodeLabel.isHidden = false
+        zipCodeTextField.isHidden = false
+        buyNowBtn.isHidden = false
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
